@@ -2,7 +2,7 @@ class User:
     def __init__(self, name, email):
         self.name = name
         self.email = email
-        self.account_balance = 0
+        self.account = BankAccount(int_rate = .02, balance=0)
 
     def make_deposit(self, amount):
         self.account_balance += amount
@@ -21,7 +21,7 @@ class User:
         otherUser.make_deposit(amount)
         return self
 
-#Creating Users and initial Deposits
+#Creating Users
 ricky = User("Ricky Rodriguez", "ricardo.rodriguez@gmail.com")
 christian = User("Christian Estrada","cjestrad@aol.com")
 adam = User("Adam Renteria", "adam.renteria@yahoo.com")
